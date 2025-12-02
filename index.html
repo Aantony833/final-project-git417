@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellNest Yoga</title>
+  <meta name="description" content=" WellNest Yoga is a neighborhood studio focused on slow, intentional movement.">
+  <meta name="author" content="Andrea Antony">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</head>
+
+<body id="top">
+    <header class="container">
+        <div class="brand">
+          <img src="images/logo-icon.jpg" alt="WellNest Yoga logo" class="logo">
+          <h1>WellNest Yoga</h1>
+        </div>
+      
+        <nav>
+          <a href="#about">About</a>
+          <a href="#shop">Shop</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      
+        <!-- Dark Mode Toggle -->
+        <button id="mode-toggle" class="icon-toggle" aria-label="Toggle dark mode">
+          🌙
+        </button>
+      </header>
+      
+  <main class="container">
+
+    <section id="home">
+      <!-- HERO SECTION -->
+      <h2>Find Your Balance</h2>
+      <p>Welcome to WellNest Yoga, a calm corner for mindful movement, breathwork, and rest.</p>
+
+      <img src="images/hero-wide.jpg" 
+       alt="Wide calming yoga studio photo" 
+       class="hero-image">
+    </section>
+  
+    <section id="about">
+      <h2>About </h2>
+      <p>
+        WellNest Yoga is a neighborhood studio focused on slow, intentional movement.
+        Our classes blend yoga, Pilates-inspired core work, and guided relaxation so you can
+        build strength without burning out. Whether you’re brand new to the mat or deepening your practice, our teachers meet you
+        where you are with small class sizes, hands-on support, and a warm, welcoming space.
+      </p>
+
+      <p>
+      You can find us at 7426 E Serenity Lane, Scottsdale, AZ 85251.
+      </p>
+      <p>
+      Studio Hours: <br>
+      Weekdays: 6:30 AM – 8:00 PM <br>
+      Weekends: 8:00 AM – 5:00 PM
+      </p>
+
+      </p>
+      <img
+        src="images/studio-wide.jpg"
+        alt="A calm yoga studio with mats laid out and soft natural light."
+        class="about-image"
+      >
+    </section>
+
+    <section id="shop">
+        <h2>Shop Yoga Essentials</h2>
+        <p>Build your home practice with our favorite studio-quality gear.</p>
+      
+        <div class="products">
+          <div class="product">
+            <img src="images/yoga-mat.jpg" alt="Teal beginner yoga mat">
+            <h3>Beginner Yoga Mat</h3>
+            <p class="price">$30</p>
+            <button class="add-to-cart" data-name="Beginner Yoga Mat" data-price="30">
+              Add to Cart
+            </button>
+          </div>
+      
+          <div class="product">
+            <img src="images/foam-roller.jpg" alt="Blue foam roller">
+            <h3>Foam Roller</h3>
+            <p class="price">$25</p>
+            <button class="add-to-cart" data-name="Foam Roller" data-price="25">
+              Add to Cart
+            </button>
+          </div>
+      
+          <div class="product">
+            <img src="images/yoga-blocks.jpg" alt="Grey Yoga Blocks">
+            <h3>Yoga Blocks</h3>
+            <p class="price">$40</p>
+            <button class="add-to-cart" data-name="Yoga Blocks" data-price="40">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      
+      </section>
+      
+<section id="courses">
+  <h2>Shop Yoga Courses</h2>
+  <p>Deepen your practice with focused, multi-week courses guided by our instructors.</p>
+
+  <div class="products">
+    <div class="product">
+      <img src="images/beginner-course.jpg" alt="Beginner yoga course">
+      <h3>4-Week Beginner Series</h3>
+      <p class="price">$120</p>
+      <button class="add-to-cart" data-name="4-Week Beginner Series" data-price="120">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="product">
+      <img src="images/slow-flow-course.jpg" alt="Slow flow evening course">
+      <h3>Slow Flow Evenings</h3>
+      <p class="price">$95</p>
+      <button class="add-to-cart" data-name="Slow Flow Evenings" data-price="95">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="product">
+      <img src="images/restore-course.jpg" alt="Restorative yoga course">
+      <h3>Rest & Restore Series</h3>
+      <p class="price">$110</p>
+      <button class="add-to-cart" data-name="Rest & Restore Series" data-price="110">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+
+  <div class="cart">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+
+    <p>Subtotal: $<span id="subtotal">0.00</span></p>
+    <p>Tax (8%): $<span id="tax">0.00</span></p>
+    <p>Shipping: $<span id="shipping">0.00</span></p>
+    <p><strong>Total: $<span id="total">0.00</span></strong></p>
+
+    <button id="checkout">Checkout</button>
+    <div id="checkout-message"></div>
+  </div>
+</section>
+
+    <section id="contact">
+        <h2>Contact Us!</h2>
+        <p>Have a question about our classes, passes, or workshops? Send us a note and we’ll get back to you soon.</p>
+      
+        <form id="contact-form" novalidate>
+          <!-- Full Name -->
+          <label for="fullName">Full Name*</label>
+          <input type="text" id="fullName" name="fullName">
+          <span class="error" id="nameError"></span>
+      
+          <!-- Preferred Contact -->
+          <fieldset>
+            <legend>Preferred Contact Method*</legend>
+            <label>
+              <input type="radio" name="contactPref" value="email">
+              Email
+            </label>
+            <label>
+              <input type="radio" name="contactPref" value="phone">
+              Phone
+            </label>
+            <span class="error" id="contactPrefError"></span>
+          </fieldset>
+      
+          <!-- Email -->
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <span class="error" id="emailError"></span>
+      
+          <!-- Phone -->
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+          <span class="error" id="phoneError"></span>
+      
+          <!-- Comments -->
+          <label for="comments">Comments*</label>
+          <textarea id="comments" name="comments" rows="4"></textarea>
+          <span class="error" id="commentsError"></span>
+      
+          <button type="submit">Submit</button>
+        </form>
+      
+        <div id="form-message"></div>
+      </section>      
+
+  </main>
+
+  <footer class="container">
+    <p>© 2025 WellNest Yoga Studio</p>
+  </footer>
+</body>
+</html>
